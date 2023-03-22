@@ -1,26 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
+import {OnOff} from "./components/OnOff/OnOff";
+import UncontrolledAccordion from "./components/SelfControlledAccordion/SelfControlledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 
 
 function App() {
+
+    let [ratingValue, setRatingValue]= useState<RatingValueType>(0)
+    let [accordionCollapsed, setAccordionCollapsed]= useState<boolean>(true)
+    let [onSwitch, setOnSwitch]=useState<boolean>(true)
     //debugger
     return (
 
-        <div>
+        <div className={'App'}>
 
             {/*<PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>*/}
-            <Accordion titleValue = {"Menu"} collapsed = {true}/>
-            <Accordion titleValue = {"Users"} collapsed = {true}/>
-            {/*Article 1
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>*/}
+            <Accordion titleValue = {"Menu"} onChange = {setAccordionCollapsed} value={accordionCollapsed}/>
+            <UncontrolledAccordion titleValue={'False'}/>
+
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <UncontrolledRating />
+
+
+            {/*<OnOff onClick={setOnSwitch} value={onSwitch}/>*/}
+            <UncontrolledOnOff onChange={setOnSwitch}/> {onSwitch.toString()}
+
+
+
+
         </div>
     );
 }
