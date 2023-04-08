@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import {UncontrolledAccordion} from './SelfControlledAccordion'
+import {UncontrolledRating} from './UncontrolledRating'
 
 
 export default{
-    title: 'SCAccordion stories',
-    component: UncontrolledAccordion,
+    title: 'UncRating stories',
+    component: UncontrolledRating,
 };
 
-export const CollapsedMode = ()=> <UncontrolledAccordion titleValue={'menu'}/>
+export const CollapsedMode = ()=> <UncontrolledRating />
 
 
 /*
