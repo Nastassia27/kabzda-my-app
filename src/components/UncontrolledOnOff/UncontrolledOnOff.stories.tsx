@@ -1,13 +1,14 @@
 import React, {useState} from "react";
-import {UncontrolledAccordion} from './SelfControlledAccordion'
+import {UncontrolledOnOff} from './UncontrolledOnOff'
 
 
 export default{
-    title: 'SCAccordion stories',
-    component: UncontrolledAccordion,
+    title: 'SCOnOff stories',
+    component: UncontrolledOnOff,
 };
 
-export const CollapsedMode = ()=> <UncontrolledAccordion titleValue={'menu'}/>
+export const CollapsedMode = ()=> <UncontrolledOnOff onChange={x=>x}/>
+export const DefaultInputValue = ()=> <input defaultValue={'yo'} />
 
 
 /*
