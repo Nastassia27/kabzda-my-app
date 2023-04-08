@@ -7,7 +7,7 @@ type AccordionPropsType = {
 }
 
 
-function Accordion (props: AccordionPropsType) {
+export function Accordion (props: AccordionPropsType) {
 
         return <div>
             <AccordionTitle title={props.titleValue} onChange={props.onChange} value={props.value}/>
@@ -44,4 +44,3 @@ function AccordionBody() {
     )
 }
 
-export default Accordion;
