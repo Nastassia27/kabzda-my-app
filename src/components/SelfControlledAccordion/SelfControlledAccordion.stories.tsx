@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+//import {checkActionsLoaded} from "@storybook/addon-interactions/dist/preset/checkActionsLoaded";
 import {UncontrolledAccordion} from './SelfControlledAccordion'
 
 
@@ -7,6 +8,7 @@ export default{
     component: UncontrolledAccordion,
 };
 
+//const callback=action('accordion mode change event fired')
 export const CollapsedMode = ()=> <UncontrolledAccordion titleValue={'menu'}/>
 
 
