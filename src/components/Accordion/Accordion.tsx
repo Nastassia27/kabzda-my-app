@@ -1,7 +1,10 @@
 import React from "react";
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string
+    /**
+     * Element collapse story if it's true and closes when false
+     */
     value: boolean
     onChange: (value:boolean )=>void
 }
