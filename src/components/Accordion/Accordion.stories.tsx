@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {Accordion} from "./Accordion";
+import {Accordion, AccordionPropsType} from "./Accordion";
+import {Story} from "@storybook/react";
 
 
 export default{
@@ -7,7 +8,17 @@ export default{
     component: Accordion,
 };
 
-export const CollapsedMode = ()=> <Accordion value={true} onChange={x=>x} titleValue={'Menu'}/>
+
+const Template: Story<AccordionPropsType> = (args)=><Accordion {...args}/>
+
+export const MenuCollapsedMode2 = Template.bind({});
+MenuCollapsedMode2.args={
+    titleValue:'Menu',
+    value: true,
+    onChange: x=>x
+
+}
+
 export const UncollapsedMode = ()=> <Accordion titleValue={'List'} onChange={x=>x} value={false}/>
 
 export const ModeChanging = ()=>{
