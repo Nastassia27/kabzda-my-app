@@ -14,7 +14,8 @@ export function Select(props: SelectPropsType) {
     //debugger
     return(
         <div>
-           <div>{props.items.filter(el=> el.value===props.value)}</div>
+            <input type={<select name="" id=""></select>}
+           {/*<div>{props.items.filter(el=> el.value===props.value)}</div>*/}
             {props.items.map(i=> <div>{i.title}</div>)}
         </div>
     )
